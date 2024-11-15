@@ -46,7 +46,7 @@ def fetch_jerrys_orders():
     if response.status_code != 200:
         print(f"Failed to fetch Jerry's data. Status code: {response.status_code}")
         return 0.0, 0
-    print ("Jerry's data: ", response.json())
+    # print ("Jerry's data: ", response.json())
     data = response.json()
     if "orders" in data:
         total_sum, order_count = process_jerrys_orders(data["orders"])
