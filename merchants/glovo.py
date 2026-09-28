@@ -22,7 +22,10 @@ def fetch_glovo_orders():
     offset = 0
     total_sum = 0.0
     order_count = 0
-    headers = {"Authorization": f"Bearer {GLOVO_AUTH_TOKEN}"}
+    headers = {
+        "Authorization": f"Bearer {GLOVO_AUTH_TOKEN}", 
+        "Glovo-App-Platform": "web",
+    }
 
     while True:
         url = BASE_URL_GLOVO.format(offset)
